@@ -16,3 +16,9 @@ follow this commands. On linux, Nodejs doesn't provide npm package when frist in
 sudo apt-get update
 sudo apt-get install nodejs npm
 ```
+
+## swdevex
+After clone this project. following commands
+```
+npm install
+```
