@@ -3,9 +3,11 @@ This project is a part of software development course. I hope to help my juniors
 
 # Installation
 Most projects i used to develop on Linux. But, In this installation. I try to write installation base on Windows. However, Between Windows & Linux has only Nodejs installation differently.
+
 ## on Windows
 follow this link. it'll redirect you to go to Nodejs homepage. Download Nodejs package and install it by "Next Step" (joke!) on your Windows.
 * Nodejs Home page : https://nodejs.org
+
 ## on Linux (Ubuntu 14.04 LTS)
 follow this commands. On linux, Nodejs doesn't provide npm package when frist installstion like Windows. You must install npm package bt your self. I recommend to use stable version from default repositories.
 ```
