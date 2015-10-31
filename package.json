@@ -1,0 +1,30 @@
+{
+  "name": "swdevex",
+  "version": "0.0.0",
+  "description": "This project is a part of software development course. I hope to help my juniors 3rd understand about web application, web service and socket io. I create a example code by using Nodejs and another packages (you can see in pakage.json).",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/9ostrd/swdevex.git"
+  },
+  "keywords": [
+    "nodejs",
+    "web",
+    "application",
+    "web",
+    "service",
+    "basic",
+    "structure"
+  ],
+  "author": "9ostrd",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/9ostrd/swdevex/issues"
+  },
+  "dependencies": {
+    "express": "~4.13.3"
+  }
+}
