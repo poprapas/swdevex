@@ -22,3 +22,9 @@ After clone this project. following commands
 ```
 npm install
 ```
+
+# run
+After installation. following commands
+```
+node app.js
+```
