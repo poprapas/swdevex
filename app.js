@@ -18,11 +18,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //config cookieParser
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'node_modules/bootstrap')));
+app.use(express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
 
 // include routes
 var routes = require('./routes/routes')(app);
 
+// create and run web application on port 8080 
 var http = require('http').Server(app);
 http.listen(8080);
 
