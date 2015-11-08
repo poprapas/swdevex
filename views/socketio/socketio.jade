@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+    h1= title
+    p Welcome to #{title},
+        span(id="guest") Guest
+    
+    script(src="/socket.io-client/socket.io.js")
+    script(type='text/javascript').
+        var socket = io.connect();
+        socket.on('notification', function (data) {
+            var name = document.getElementById("guest");
+            name.innerHTML = data.messages;
+        });

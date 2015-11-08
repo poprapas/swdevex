@@ -16,14 +16,18 @@ app.set('view engine', 'jade');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 //config cookieParser
-app.use(cookieParser());
+app.use(cookieParser( "secret", {"path": "/"} ));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use(express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
 
-// include routes
-var routes = require('./routes/routes')(app);
 
 // create and run web application on port 8080 
 var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
+// include routes
+var routes = require('./routes/routes')(app, io);
+
 http.listen(8080);
 
