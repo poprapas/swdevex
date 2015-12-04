@@ -13,8 +13,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 var fakedatabase = [
-            {id: '1', name: '9ostrd', username: 'admin', password: 'password'},
-            {id: '2', name: 'robotic', username: 'user', password: 'password'}
+            {id: '1', name: '9ostrd', username: 'admin', password: 'password', role: 'admin'},
+            {id: '2', name: 'robotic', username: 'user', password: 'password', role: 'user'}
         ];
 
 var passport = require('passport')
@@ -85,7 +85,7 @@ function loggedIn(req, res, next) {
 var http = require('http').Server(app);
 
 // include routes
-var routes = require('./routes')(app);
+var routes = require('./routes')(app, loggedIn);
 
  // catch 404 and forward to error handler
 app.use(function(req, res, next) {

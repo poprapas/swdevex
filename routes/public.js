@@ -1,4 +1,4 @@
-module.exports = function(app) {
+module.exports = function(app, loggedIn) {
 
     app.get('/', function(req, res) {
         res.render('index', { title: '9ostrd' });

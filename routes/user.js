@@ -1,6 +1,6 @@
-module.exports = function(app) {
+module.exports = function(app, loggedIn) {
 
-    app.get('/user', function(req, res) {
+    app.get('/user', loggedIn,  function(req, res) {
         res.render('user/profile', { title: '9ostrd' });
     });
     
