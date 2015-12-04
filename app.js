@@ -21,13 +21,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use(express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
 
-
 // create and run web application on port 8080 
 var http = require('http').Server(app);
-var io = require('socket.io')(http);
 
 // include routes
-var routes = require('./routes/routes')(app, io);
+var routes = require('./routes')(app);
+
+ // catch 404 and forward to error handler
+app.use(function(req, res, next) {
+    res.writeHead(404, {"Content-Type": "text/plain"});
+    res.write("404 Not Found\n");
+    res.end();
+});
 
 http.listen(8080);
 
