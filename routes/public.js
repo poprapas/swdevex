@@ -1,10 +1,5 @@
 module.exports = function(app) {
 
-    var fakedatabase = [
-            {id: 'E148FA521', name: '9ostrd'},
-            {id: 'F676C9049', name: 'robotic'}
-        ];
-
     app.get('/', function(req, res) {
         res.render('index', { title: '9ostrd' });
     });
@@ -24,7 +19,5 @@ module.exports = function(app) {
     //     }
     //     res.status(404).send('404 Not found\n');
     // });
-
-   
 
 };
