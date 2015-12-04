@@ -1,4 +1,4 @@
-extends layout/layout
+extends ../layout/layout
 
 block content
 	h1= title
@@ -7,12 +7,3 @@ block content
 		input(type="text", name="username")
 		input(type="password", name="password")
 		button(type="submit") login
-
-	table
-		tr
-			th ชื่อ
-			th หมายเลข
-		each item in list
-			tr
-				td= item.name
-				td= item.number

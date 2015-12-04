@@ -1,11 +1,22 @@
 module.exports = function(app, loggedIn) {
 
     app.get('/', function(req, res) {
-        res.render('index', { title: '9ostrd' });
+        res.render('index', { title: '9ostrd' , list:[
+            {name: 'ost' , number: '3'},
+            {name: 'ost' , number: '4'}
+        ]}); 
     });
     
     app.get('/socketio', function(req, res) {
         res.render('socketio/socketio', { title: '9ostrd' });
+    });
+
+    app.get('/poprapas', function(req, res) {
+        res.render('pop', { title: 'Poprapas' });
+    });
+
+    app.get('/pp', function(req, res) {
+        res.render('pop/pp', { title: 'Poprapas' });
     });
     
     // app.post('/api/rfid', function(req, res) {

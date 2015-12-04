@@ -19,6 +19,16 @@ html
                         a(class="navbar-brand", href="#") 9ostrd
                     div(class="collapse navbar-collapse", id="bs-example-navbar-collapse-1")
                         ul(class="nav navbar-nav")
-                            li
-                                a(href="#") Example navbar
+                            if user != undefined
+                                if user.role == 'admin'
+                                    li
+                                        a(href="#") Example for Admin
+                                else
+                                    li
+                                        a(href="#") Example for User
+                            else
+                                li
+                                    a(href="#") Example for Guest
+
+
             block content
